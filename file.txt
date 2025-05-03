@@ -1,0 +1,1 @@
+this file will be read by server whenever a client connects to it and it's content will be returned to the client.
