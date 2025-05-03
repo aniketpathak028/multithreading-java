@@ -1,5 +1,7 @@
 # Single Threaded vs MultiThreaded vs ThreadPool
 
+The servers were tested with TCP sampler of 60K RPM in JMeter.
+
 ### Single Threaded jMeter load test
 
 ![notice the sample time in ms](single-table.png)
