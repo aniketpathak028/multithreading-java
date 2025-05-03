@@ -1,6 +1,6 @@
 # Single Threaded vs MultiThreaded vs ThreadPool
 
-The servers were tested with TCP sampler of 60K RPM in JMeter.
+The servers were tested with TCP sampler of 60K RPM in JMeter, a basic file read is happening in the server for each client request, which can be thought of as a blocking request! The results are listed below with some analysis.
 
 ### Single Threaded jMeter load test
 
@@ -8,17 +8,23 @@ The servers were tested with TCP sampler of 60K RPM in JMeter.
 
 ![notice the throughput](single-graph.png)
 
+throughput = 32k requests/minute (not impressive)
+
 ### MultiThreaded jMeter load test
 
 ![notice the sample time in ms](multi-table.png)
 
 ![notice the throughput](multi-graph.png)
 
+throughput = 57k requests/minute (impressive)
+
 ### Thread pool jMeter load test
 
 ![notice the sample time in ms](pool-table.png)
 
 ![notice the throughput](pool-graph.png)
+
+throughput = 59k requests/minute (great! almost touching our TCP sampler RPM)
 
 ## Performance Comparison Analysis
 
